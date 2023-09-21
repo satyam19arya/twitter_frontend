@@ -65,14 +65,14 @@ export default function Home() {
   return (
     <>
       <div className='grid grid-cols-12 h-screen w-screen px-52'>
-        <div className='col-span-3 pt-6'>
-          <div className='text-4xl h-fit w-fit hover:bg-gray-100 rounded-full p-1 cursor-pointer transition-all'>
+        <div className='col-span-3 pt-3'>
+          <div className='text-3xl h-fit w-fit hover:bg-gray-100 rounded-full p-2 cursor-pointer transition-all'>
             <SlSocialTwitter/>
           </div>
           <div>
             <ul>
               {sidebarMenuItems.map((item, index) => (
-                <li key={index} className='flex items-center justify-start space-x-4 py-3 px-2 hover:bg-gray-100 rounded-full cursor-pointer transition-all'>
+                <li key={index} className='flex items-center justify-start space-x-4 py-2 px-2 hover:bg-gray-100 rounded-full cursor-pointer transition-all'>
                   <div className='text-2xl'>
                     {item.icon}
                   </div>
@@ -82,6 +82,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <button className='bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full px-6 py-2 mt-2 transition-all w-3/5'>Tweet</button>
           </div>
         </div>
         <div className='col-span-6 border-r-[0.5px] border-l-[0.5px] border-gray-400'></div>
