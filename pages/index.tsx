@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google'
 import {SlSocialTwitter} from 'react-icons/sl'
 import {AiOutlineHome} from 'react-icons/ai'
 import {BiHash} from 'react-icons/bi'
@@ -8,8 +7,8 @@ import {BsBookmarkDash} from 'react-icons/bs'
 import {CgProfile} from 'react-icons/cg'
 import {CgMoreR} from 'react-icons/cg'
 import {RiVerifiedBadgeLine} from 'react-icons/ri'
+import FeedCard from '@/components/FeedCard'
 
-const inter = Inter({ subsets: ['latin'] })
 
 interface TwitterSideBarButton {
   icon: React.ReactNode;
@@ -76,16 +75,24 @@ export default function Home() {
                   <div className='text-2xl'>
                     {item.icon}
                   </div>
-                  <div className='text-lg font-semibold'>
+                  <div className='text-base'>
                     {item.text}
                   </div>
                 </li>
               ))}
             </ul>
-            <button className='bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full px-6 py-2 mt-2 transition-all w-3/5'>Tweet</button>
+            <button className='bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8 py-2 mt-2 transition-all w-3/5'>Tweet</button>
           </div>
         </div>
-        <div className='col-span-6 border-r-[0.5px] border-l-[0.5px] border-gray-400'></div>
+        <div className='col-span-6 border-r-[0.5px] border-l-[0.5px] border-gray-400 h-screen overflow-y-scroll scrollbar-hide'>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+          <FeedCard/>
+        </div>
         <div className='col-span-3'></div>
       </div>
     </>
